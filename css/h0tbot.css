@@ -1,0 +1,62 @@
+#h0tbot {
+    position:fixed;
+    bottom:0px;
+    right:100px;
+    width:400px;
+}
+
+#h0tbot h5 {
+   font-size: 1.5em;
+}
+
+#h0tbot .h0tbot-header {
+    padding:6px;
+    padding-left:20px;
+}
+#h0tbot .h0tbot-body {
+    height:25rem;
+    background-color: ivory;
+    display:none;
+}
+#h0tbot .messages {
+    padding:10px;
+    overflow-y:scroll;
+    height:22rem;
+}
+#h0tbot .bubble {
+    display:block;
+    max-width:80%;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding:8px;
+    margin-top: 8px;
+    /*   filter: drop-shadow(2px 2px 2px #222222); */
+}
+#h0tbot .from-bot {
+    text-align: left;
+    background-color:lightblue;
+    float: left;
+    clear:left;
+}
+#h0tbot .from-user {
+    text-align:right;
+    background-color:lightgreen;
+    float:right;
+    clear:right;
+}
+#addMsg {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:2rem;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color:black;
+    resize:none;
+    border-radius:0px;
+    overflow: hidden;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
