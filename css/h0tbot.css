@@ -21,7 +21,7 @@
 #h0tbot .messages {
     padding:10px;
     overflow-y:scroll;
-    height:22rem;
+    height:19rem;
 }
 #h0tbot .bubble {
     display:block;
@@ -48,7 +48,7 @@
     position:absolute;
     bottom:0;
     width:100%;
-    height:2rem;
+    height:5rem;
     border-width: 1px 0px 0px 0px;
     border-style: solid;
     border-color:black;
