@@ -161,11 +161,41 @@
 
 
   <div class="parallax-container valign-wrapper" id="try">
-    <div class="section no-pad-bot" style="top: 30%">
+    <div class="section no-pad-bot" style="top: 0%; padding-top: 0px;">
       <div class="container">
         <div class="row center">
-          <h4 class="header col s12 light">Register for a demo today</h4>
-          <h5 class="header col s12 light">R.S.V.P. to our patented Birthday Experience onboarding event from 3-4PM on Sunday, July 26th.</h5>
+            <h4 class="header col s12 amber-text"><b>Register for a demo today</h4></b>
+          <h5 class="header col s12 amber-text">R.S.V.P. to our patented Birthday Experience onboarding event from 3-4PM on Sunday, July 26th.</h5>
+          <form class="col s12" action="mailto:corporatefantasyadventures@gmail.com" method="get">
+              <input type="hidden" name="subject" value="Greetings, Founder.">
+              <input type="hidden" name="Body" value="I will gladly attend Corporate Fantasy Adventures, LLC's Birthday Experience onboarding event.">
+              <div class="row">
+                  <div class="input-field col s5">
+                      <input id="name" type="text" name="name" class="amber-text">
+                      <label for="name">Name</label>
+                  </div>
+                  <div class="input-field col s5">
+                      <input id="email" type="text" name="email" class="amber-text">
+                      <label for="email">Email</label>
+                  </div>
+                  <div class="input-field col s2">
+                      <label>
+                      <input id="attending" class="amber-text filled-in amber" type="checkbox" checked="checked" disabled="disabled"/>
+                      <span class="amber-text">Yes</span></label>
+                  </div>
+              </div>
+              <div class="row">
+                    <div class="col s8 m3">
+                    <small style="line-height:1rem">Clicking this button implies consent to our <a href="https://www.wesellyourdata.com">Family-Friendly Data Collection policy</a>, suitable for ages 3-99.</small>
+                    </div>
+                    <div class="col s4 m9 " style="text-align:left">
+                    <button class="amber btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                    </button>
+                    
+                    </div>
+              </div>
+          </form>
         </div>
       </div>
     </div>
@@ -186,34 +216,34 @@
               </div>
           </div>
           <div class="row">
-              <div class="col s12 m4"><img src="pics/HR.png" class="circle responsive-img">
+              <div class="col s12 m4"><img src="pics/HR.png" id="hr" width="150px" class="circle responsive-img">
                   <h5>Human Resources</h5>
                   <b>Sara Lee-Okada</b><br/>
                   <i>We're one big happy family. Relax! But not too much. And be productive. Please do not talk to journalists.</i>
               </div>
-              <div class="col s12 m4"><img src="pics/DEI.png" class="circle responsive-img">
+              <div class="col s12 m4"><img src="pics/DEI.png" width="150px" class="circle responsive-img">
                   <h5>Chief of Diversity</h5>
                   <b>Jamal Dolezal, MFA</b><br/>
                   <i>I believe the United States carries so much weight in its genocidal and racist history that ultimately white people in particular have to come to terms with and atone for.</i>
               </div>
-              <div class="col s12 m4"><img src="pics/CTO.png" class="circle responsive-img">
+              <div class="col s12 m4"><img src="pics/CTO.png" width="150px" id="cto" class="circle responsive-img">
                   <h5>Technology Czar</h5>
                   <b>Kym Kissinger</b><br/>
                   <i>I was mentored by George Bush, Sr, and I consider Henry Kissinger to be my literal father. I’m so proud to be in this position over our wonderful 500-employee family. </i>
               </div>
           </div>
           <div class="row">
-              <div class="col s12 m4"><img src="pics/CFO.png" class="circle responsive-img">
+              <div class="col s12 m4"><img src="pics/CFO.png" id="cfo" width="150px" class="circle responsive-img">
                   <h5>Chief of Finance</h5>
                   <b>Tamantha Rambo</b><br/>
                   <i>I am always happy to talk about our many legitimate and varied businesses and investments.</i>
               </div>
-              <div class="col s12 m4"><img src="pics/COO.png" class="circle responsive-img">
+              <div class="col s12 m4"><img src="pics/COO.png" width="150px" id="coo" class="circle responsive-img">
                   <h5>Operations Lead</h5>
                   <b>Lalita Schwartz</b><br/>
                   <i>I do a bit of everything, you could say I’m a Jill of All Trades, you know, a bit of tidying here, organizing there, purging, expunging, microwaving, burning, some building security and armed protection, stern conversations…</i>
               </div>
-              <div class="col s12 m4"><img src="pics/GC.png" class="circle responsive-img">
+              <div class="col s12 m4"><img src="pics/GC.png" width="150px" id="gc" class="circle responsive-img">
                   <h5>General Counsel</h5>
                   <b>Tina Garbanzo, Esq.</b><br/>
                   <i>You can ask me questions. My answer will be "It depends!" as per my programming. Please do not use the company network for downloading movies illegally.</i>
@@ -254,7 +284,7 @@
   </footer>
 
 
-  <div id="h0tbot">
+  <div id="h0tbot" class="hide-on-small-only">
       <div class="h0tbot-header amber">
           <img src="https://cdn.glitch.com/19aa3a7c-7170-4459-b123-67adfb870f2c%2F04_Computer_Secured_face_emotion_happy_smile-512.png?v=1594665815211" style="width:48px; float:left; margin-right:15px">
           <h5>
