@@ -30,6 +30,7 @@
                 }
             }
         });
+      $(".fixed-action-btn").floatingActionButton({hoverEnabled: false});
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

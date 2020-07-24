@@ -28,33 +28,41 @@ let question;
 let answer;
 let index = 0;
 setQuestion()
-$('.h0tbot-header').click(function(){
-  $('.h0tbot-body').slideToggle(400, function(){
+$('.h0tbot-btn').click(function(){
+  $('#h0tbot').slideToggle(400, function(){
     $('#addMsg').focus();
-  })
+    });
+  let icon = document.getElementById("chat-icon");
+  if (icon.innerHTML == "chat") {
+  icon.innerHTML="keyboard_arrow_down";
+  } else {
+  icon.innerHTML="chat";
+  }
 })
+
+$('#send-icon').click(function(e) {
+  e.preventDefault();
+  if (index < question.length) {
+    return;
+  }
+  sendUserMsg();
+});
 
 $('#addMsg').keydown(function(e){
   if(e.key == "Enter" && index >= question.length){
     sendUserMsg()
-    setTimeout(function(){
-      index = 0
-      sendBotResponse()
-      setQuestion()
-    },500)
-
-  }
-  else {
+  } else if (index >= 0) {
     if(question[index]){
       $(this).val(question.substring(0,index+1))
-      $(this).scrollLeft($(this).width());
       index++
     }
-
+    $('#send-icon').css("cursor", "pointer");
+    $('#send-icon').css("color", "#2196f3");
   }
   e.preventDefault();
   return false;
-})
+});
+
 $('#addMsg').keypress(function(){
   return false
 })
@@ -68,8 +76,16 @@ function sendUserMsg(){
   let msg = $('#addMsg').val()
   $('#h0tbot .messages').append("<div class='bubble from-user'>"+msg+"</div>").scrollTop($('#h0tbot .messages')[0].scrollHeight);
   $('#addMsg').val("")
-  
+    $('#send-icon').css("cursor", "auto");
+    $('#send-icon').css("color", "#aaaaaa");
+  index = -1;
+  setTimeout(function(){
+    index = 0;
+    sendBotResponse();
+    setQuestion();
+  },500);
 }
+
 function setQuestion(){
   let qa = take(questions)
   question = qa.q
@@ -80,4 +96,7 @@ function choice(arr){
 }
 function take(arr){
 	return arr.splice(Math.floor(Math.random() * arr.length), 1)[0]
+}
+
+function sendMsg() {
 }
