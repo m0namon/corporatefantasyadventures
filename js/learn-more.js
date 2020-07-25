@@ -27,6 +27,73 @@ let learnmore = {
     "bio": "We are the Chicago-based company that has created some of the most unusual corporate fantasy experiences in the industry. Since the late 1990s, we have been taking teams and companies on unforgettable adventures through our thrilling game of Corporate Escape. Our participants, most of whom have never played an interactive live-action role-playing game before, are treated to six hours of fun with friends, colleagues, clients and bosses. During the game, participants engage in collaborative problem-solving activities while playing the role of a wizard, knight, peasant, spy, time traveler, dashing pirate, brave knight, mime, creature and more."
 }
 
+let h0tbotlearnsmore = [
+    {
+        q: "Why is Corporate Fantasy Adventures, LLC raising capital in a time of stock market downturn?",
+        a: "Great question! That is an excellent question."
+    },
+    {
+        q: "Can I have your money?",
+        a: "Great question!"
+    },
+    {
+        q: "I am an aspiring writer and I am working on a piece about your company. What is your favorite story from The Talmud?",
+        a: "“You can have all my money and my house if you give me your daughter.”"
+    },
+    {
+        q: "Does Corporate Fantasy Adventures, LLC offer day care services for children while their parents are working?",
+        a: "Great question! We have a variety of options for day care, including a new nature-themed facility in our Eastern headquarters."
+    },
+    {
+        q: "How is Corporate Fantasy Adventures, LLC connected to the Rosicrucians?",
+        a: "It is our business model."
+    },
+    {
+        q: "Does Corporate Fantasy Adventures, LLC have any questions?",
+        a: "Yes. We want to know your email address."
+    },
+    {
+        q: "What is your company’s mission statement?",
+        a: "Great question! “To further the prosperity of shareholders and Mother.”"
+    },
+    {
+        q: "What is your company’s vision statement?",
+        a: "Our vision is the same as our mission statement."
+    },
+    {
+        q: "How long will Corporate Fantasy Adventures, LLC exist?",
+        a: "Longer than you will."
+    },
+    {
+        q: "What is your company’s approach to sustainability?",
+        a: "Our company has a recycling program, which encourages us to minimize our carbon footprint, and maximize the growth of our assets",
+    },
+    {
+        q: "What are some of your company’s career goals?",
+        a: "Great question! We want to maximize our profits and deliver record gains to shareholders."
+    },
+    {
+        q: "What was the best piece of career advice you were ever given?",
+        a: "Great question! “Work for The Man.”"
+    },
+    {
+        q: "Are you a monopoly?",
+        a: "Yes."
+    },
+    {
+        q: "Will I make more money working for Corporate Fantasy Adventures, LLC?",
+        a: "Great question! That’s a great question!"
+    },
+    {
+        q: "Are there any secrets to success in Corporate Fantasy Adventures, LLC?",
+        a: "Yes. Our success is based on the acquisition of subsidiaries."
+    },
+    {
+        q: "What are the most important qualities in a corporate executive?",
+        a: "Great question! Focus, ambition, and an indefatigable will to power."
+    }
+]
+
 $('#learn-more').click(function(e) {
     if ($('#learn-more-text').text() === "learn more") {
         $('.learn-more').css('display', 'inline');
@@ -35,6 +102,7 @@ $('#learn-more').click(function(e) {
             $("#" + key).html(value);
         }
         $('#learn-more-text').text("learn less");
+        questions = h0tbotlearnsmore;
     } else {
         window.location.reload();
     }

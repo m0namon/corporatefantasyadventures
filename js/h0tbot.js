@@ -1,4 +1,4 @@
-let questions = [
+var questions = [
   {
     q: "What is Corporate Fantasy Adventures, LLC?",
     a: "Great question! We are leaders, changemakers, and role models. We fight for those at the margins. We fight for profit. And we fight for profit margins."
