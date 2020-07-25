@@ -53,8 +53,8 @@ $('#addMsg').keydown(function(e){
     sendUserMsg()
   } else if (index >= 0) {
     if(question[index]){
-      $(this).val(question.substring(0,index+1))
-      index++
+      $(this).text(question.substring(0,index+1))
+      index++;
     }
     $('#send-icon').css("cursor", "pointer");
     $('#send-icon').css("color", "#2196f3");
@@ -73,9 +73,9 @@ function sendBotResponse(){
     $('#h0tbot .messages').append("<div class='bubble from-bot'>"+answer+"</div>").scrollTop($('#h0tbot .messages')[0].scrollHeight);
 }
 function sendUserMsg(){
-  let msg = $('#addMsg').val()
+  let msg = $('#addMsg').text()
   $('#h0tbot .messages').append("<div class='bubble from-user'>"+msg+"</div>").scrollTop($('#h0tbot .messages')[0].scrollHeight);
-  $('#addMsg').val("")
+  $('#addMsg').text("");
     $('#send-icon').css("cursor", "auto");
     $('#send-icon').css("color", "#aaaaaa");
   index = -1;
